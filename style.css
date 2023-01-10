@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  :root{
+    --bg-main: #F8F9F9;
+    --sb-accent: #FAF2FE;
+    --bt-bg-accent:#D796EC;
+  }
+
+  .side-left{
+    width: 15%;
+    float:left;
+    padding: 45px 30px;
+  }
+
+  .heading-hero{
+    display: flex;
+    margin-bottom: 110px;
+    cursor: pointer;
+  }
+
+  .hero-logo{
+    margin-right: 5px;
+  }
+
+  .logo-text{
+    color: #360c8ac8;
+  }
+
+  .dashboard{
+    display: flex;
+  }
+
+  .profile{
+    display: flex;
+    cursor: pointer;
+  }
+
+  .members{
+    display: flex;
+    cursor: pointer;
+  }
+
+  .analytics{
+    display: flex;
+    cursor: pointer;
+  }
+
+  .document{
+    display: flex;
+    cursor: pointer;
+  }
+
+  .setting{
+    display: flex;
+    cursor: pointer;
+  }
+
+  .logout{
+    display: flex;
+    cursor: pointer;
+    /* justify-content: ; */
+  }
+
+  .menu-options>div:last-child{
+    position: absolute;
+    bottom: 0;
+  }
+
+.nav-items{
+    margin: 20px 0;
+    align-items: center;
+    color: #a6a2a2;
+}
+
+.nav-items.active{
+    background-color: #F9F1FC;
+    color: black;
+    border-radius: 13px;
+    padding: 5px;
+}
+
+.mr-15{
+    margin-right: 15px;
+    padding: 0 8px;
+    padding-top: 5px;
+}
+
+.mr-15.active{
+    color: white;
+    background-color: #D796EC;
+    border-radius: 10px;
+}
+
+.nav-text.active{
+    color: black;
+}
+
+.nav-text{
+    color: #a6a2a2;
+}
+
+.nav-links{
+    display: flex;
+}
+
+
+
+/* Main Content */
+
+
+
+
+  .main{
+    background-color: var(--bg-main);
+    width: 65%;
+    float: left;
+    padding: 2.5rem 1.75rem;
+  }
+
+  /* Header Section */
+  .upper-main{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5em;
+  }
+
+  .date{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .4px solid rgb(191, 188, 188);
+    border-radius: 12px;
+    height: 35px;
+    padding: 10px;
+  }
+
+  .date-text{
+    margin-left: 5px;
+    color: rgba(0, 0, 0, 0.705);
+    font-weight: 400;
+    letter-spacing: .3px;
+  }
+
+  /* Cards Section */
+  .cards-main{
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+
+  .card{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5em;
+    width: 23.5%;
+    border-radius: 15px;
+    box-shadow: 0px 15px 15px -15px #a6a2a2;
+    position: relative;
+  }
+
+  .card-icon{
+    font-size: 35px;
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: 1;
+    color: white;
+    border-radius: 10px;
+    padding: 6px;
+  }
+
+  .card-icon.card1{
+    background-color: #ED96B4;
+  }
+
+  .card-icon.card2{
+    background-color: #D796EC;
+  }
+
+  .card-icon.card3{
+    background-color: #9896EC;
+  }
+
+  .card-icon.card4{
+    background-color: #95E8ED;
+  }
+
+  .card-content{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-text{
+    font-size: small;
+    color: #a6a2a2;
+  }
+
+  .card-text.plus{
+    color: rgb(15, 189, 24);
+  }
+
+  .card-text.minus{
+    color: rgb(191, 9, 9);
+  }
+
+  .trend-up{
+    color: rgb(15, 189, 24);
+  }
+
+  .trend-down{
+    color: rgb(191, 9, 9);
+  }
+
+
+
+  /* Main content */
+
+  .content-main{
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 25px 35px -15px #E4E6F3;
+  }
+
+.content-main-details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.content-main-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-user-icon{
+    margin-right: 15px;
+}
+
+.user-icon{
+    background-color:#95E8ED;
+    padding: 10px 5px 0 5px;
+    border-radius: 50%;
+}
+
+.active-details{
+    color: #a6a2a2;
+    font-size: .85em;
+}
+
+.user-comment{
+    font-size: .9em;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.no-like-cmnt{
+    display: flex;
+    margin: 10px 0;
+}
+
+.no-likes{
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+    vertical-align: middle;
+    color: #a6a2a2;
+}
+
+.no-cmnt{
+    display: flex;
+    /* line-height: 48px; */
+    align-items: center;
+    vertical-align: middle;
+    color: #a6a2a2;
+}
+
+.like{
+    color: rgb(214, 108, 108);
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.cmnt{
+    color: grey;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.cmnt-box{
+    margin-bottom: 20px;
+}
+
+.cmnt-box-wrapper{
+    display: flex;
+}
+
+.input-cmnt{
+    color: #646464;
+    background-color: #FAFAFA;
+    border: .3px solid #CACACA;
+    outline: none;
+    border-radius: 12px;
+    height: 40px;
+    padding: 5px 10px;
+    display: inline-flex;
+    font-size: small;
+    margin-right: 10px;
+}
+
+.add-cmnt{
+    border-radius: 50%;
+    background-color: #D796EC;
+    padding: 3px 10px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.comment-user{
+    display: flex;
+}
+
+.sec{
+    background-color: #D796EC;
+}
+
+.sec-user-icon{
+    margin-right: 10px;
+}
+
+.sec-user > .user-comment{
+    margin: 5px 10px 20px 0;
+}
+
+.seeall{
+    color: #D796EC;
+    font-size: .7em;
+    cursor: pointer;
+}
+
+
+/* Second User Card */
+.content-main-add{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+}
+
+
+
+  /* Right Sidebar */
+
+  .side-right{
+    background-color: white;
+    width: 20%;
+    float: right;
+    padding: 45px 30px;
+  }
+
+  .tools-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .search-box{
+    width: 60%;
+    outline: none;
+    color: #646464;
+    background-color: #FAFAFA;
+    border: .3px solid #CACACA;
+    border-radius: 13px;
+    height: 40px;
+    padding: 5px 10px;
+  }
+  .msg, .notification{
+    flex: 0 0 15%;
+    /* margin-right: 10px; */
+    padding: 3px 0 0 7px;
+    border: .3px solid #CACACA;
+    border-radius: 10px;
+  }
+  
+
+  .msg::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
+
+  .notification::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    right: 2%;
+  }
+
+  .my-profile{
+    display: block;
+  }
+
+  .profile-card{
+    margin-bottom: 20px;
+  }
+
+  .my-profile>h2{
+    margin-bottom: 20px;
+  }
+
+  .profile-pic{
+    height: 14rem;
+    background-color: #D796EC;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .profile-desc{
+    margin-top: 10px;
+    color: #646464;
+    font-size: medium;
+    line-height: 1.6;
+  }
+
+  .admin-pic{
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: 1;
+  }
+
+  .stats{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .activity-item{
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    color: #a6a2a2;
+    font-size: smaller;
+  }
+
+  .square{
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+  }
+
+  .col1{
+    background-color: #D797EB;
+  }
+
+  .col2{
+    background-color: #99E5EB;
+  }
+
+  .col3{
+    background-color: #9A96EA;
+  }
+
+  .col4{
+    background-color: #ED95B3;
+  }
+  
